@@ -18,5 +18,4 @@ jobs:
       run: |
         npm ci
         npm run embeddable:build
-        npm run params -- --api-key 2d8d190a-f822-4dcf-9f4e-9c738675301a --email jozef@embeddable.de --message "Test Github CI"
         npm run embeddable:push -- --api-key 2d8d190a-f822-4dcf-9f4e-9c738675301a --email jozef@embeddable.de --message "Test Github CI"

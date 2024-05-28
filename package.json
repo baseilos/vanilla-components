@@ -14,7 +14,7 @@
     "build": "embeddable build",
     "push": "embeddable push",
     "lint": "npx eslint . --ext .ts --ext .tsx",
-    "params": "node -e 'console.log(process.argv);'"
+    "params": "node params.js"
   },
   "dependencies": {
     "@cubejs-backend/api-gateway": "^0.35.37",
