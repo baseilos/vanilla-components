@@ -1,0 +1,22 @@
+name: Push workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22.2.0
+    - name: Install & Build
+      run: |
+        npm i
+        npm run embeddable:build
+    - name: Deploy to TEST
+      run: npm run embeddable:push -- --api-key 2d8d190a-f822-4dcf-9f4e-9c738675301a --email jozef@embeddable.de --message "Test Github CI"
